@@ -16,6 +16,7 @@
     padding: 6px 12px;
     color: white;
     transition: all 0.4s ease;
+    
 }
 
 /* Underline glow */
@@ -64,4 +65,67 @@
     .nav-links {
         display: none;
     }
+}
+
+.toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+/* Hide default checkbox */
+#miniToggle {
+    display: none;
+}
+
+/* Toggle Track */
+.mini-switch {
+    width: 50px;
+    height: 24px;
+    background-image: linear-gradient(to right, rgb(0, 255, 8), rgba(18, 226, 67, 0.084));
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Toggle Knob */
+.mini-switch::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+/* ON State */
+#miniToggle:checked+.mini-switch {
+    background-image: linear-gradient(to right, rgba(18, 226, 67, 0.084), rgb(247, 0, 255));
+}
+
+#miniToggle:checked+.mini-switch::before {
+    left: 29px;
+}
+/* search button */
+.btn {
+    background-image: linear-gradient(135deg, #d01fef -30%, #111111 50%, #0ff166 150%);
+    color: white;
+    height: auto;
+    width: auto;
+    margin: 5px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+/* Main Content */
+.mainContent{
+    background-image: linear-gradient(135deg, #d01fef -20%, #000000 80%, #0ff166 150%);
+    height: 200px;
+    width: 450px;
+    border-radius: 20px;
 }
