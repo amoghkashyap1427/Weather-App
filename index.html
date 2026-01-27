@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather17</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/25d45303f4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,9 +15,9 @@
     <nav class="navbar flex items-center justify-between px-6 py-4 relative">
 
         <!-- Logo -->
-        <div class="flex items-center gap-3">
-            <img src="photos/weather_icon.png" alt="Weather Icon" class="w-10 h-10"/>
-            <h1 class="text-2xl font-bold logo-text">Weather17</h1>
+        <div class="flex items-center gap-2">
+            <img src="photos/weather_icon.png" alt="Weather Icon" class="w-8 h-8"/>
+            <h1 class="text-[15px] font-bold logo-text">Weather17</h1>
         </div>
 
         <!-- Desktop Links -->
@@ -29,7 +30,7 @@
         <input type="checkbox" id="menu-toggle" class="hidden">
 
         <!-- Hamburger -->
-        <label for="menu-toggle" class="menu-icon md:hidden text-3xl cursor-pointer">☰</label>
+        <label for="menu-toggle" class="menu-icon md:hidden text-[15px] cursor-pointer">☰</label>
 
         <!-- Mobile Dropdown -->
         <div class="mobile-menu flex-col items-center gap-6 py-6 text-lg font-semibold">
@@ -39,15 +40,51 @@
 
     </nav>
     <!-- CELCIUS TO FAHRENHEIT -->
-    <div class="c2f">
-        
+    <div class="c2f flex mt-4 pl-3">
+        <div class="toggle-wrap">
+            <span>°C</span>
+            <input type="checkbox" id="miniToggle">
+            <label for="miniToggle" class="mini-switch"></label>
+            <span>°F</span>
+        </div>
     </div>
     <!-- SEARCH -->
-    <div class="search flex flex-col items-center mt-10 gap-4">
-        <input type="text" placeholder="Enter city name" class="p-3 rounded text-black w-64"/>
-        <button class="p-3 bg-purple-600 rounded text-white hover:bg-green-400 hover:text-black transition duration-300">
-            Search
-        </button>
+    <div class="searchInput flex flex-col items-center mt-2 mb-5">
+        <div class="search flex items-center justify-center mt-1 gap-3">
+            <div class="bg-[white] rounded-[100px] flex flex-row justify-space wmin-w-[200px]">
+                <input type="text" placeholder="Search Location..." class="p-3 rounded-[100px] text-black w-64 h-8 m-2"/>
+                <button class="btn text-black px-4 py-2 rounded-[100px] hover:bg-blue-700 transition duration-300"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="mainContentContainer flex justify-center">
+        <div class="mainContent">
+            <div class="liveLocation mr-6 flex justify-end pt-4">
+                <p class="location">Burdwan<i class="fa-solid fa-location-pin" style="color: #ffffff;"></i></p>
+            </div>
+            <div class="temperature">
+                <h1 class="tempValue flex justify-center text-[50px]"></i>32°C</h1>
+                <p class="date ml-[10px] text-[10px]">Aug 23, Tue</p>
+            </div>
+            <div class="otherParameters flex justify-around mt-6 px-6 text-[12px]">
+                <div class="humidity flex flex-col text-center">
+                    <p class="font-bold">HUMIDITY</p>
+                    <p class="text-[10px]">99%</p>
+                </div>
+                <div class="visiblity flex flex-col text-center">
+                    <p class="font-bold">VISIBLITY</p>
+                    <p class="text-[10px]">8km</p>
+                </div>
+                <div class="airPressure flex flex-col text-center">
+                    <p class="font-bold">AIR PRESSURE</p>
+                    <p class="text-[10px]">1013hPa</p>
+                </div>
+                <div class="wind flex flex-col text-center">
+                    <p class="font-bold">WIND</p>
+                    <p class="text-[10px]">5kmPh</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
