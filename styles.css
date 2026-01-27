@@ -1,0 +1,67 @@
+/* 🌌 Navbar */
+.navbar {
+    background: linear-gradient(90deg, #0f0f0f, #14001f, #001a0f);
+    box-shadow: 0 0 15px #8a2be2, 0 0 30px #39ff14;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Logo */
+.logo-text {
+    color: white;
+}
+
+/* Nav links */
+.nav-item {
+    position: relative;
+    padding: 6px 12px;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+/* Underline glow */
+.nav-item::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 50%;
+    bottom: -6px;
+    background: linear-gradient(90deg, #a855f7, #39ff14);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #39ff14;
+}
+
+/* Hover effect */
+.nav-item:hover {
+    /* text-shadow: 0 0 8px #39ff14, 0 0 15px #a855f7; */
+    transform: translateY(-2px) scale(1.08);
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* 📱 Mobile menu */
+.mobile-menu {
+    display: none;
+    background: #0a0a0a;
+    box-shadow: 0 0 15px #a855f7;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+/* Toggle open */
+#menu-toggle:checked ~ .mobile-menu {
+    display: flex;
+}
+
+/* Hide desktop links on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}

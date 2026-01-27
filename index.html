@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather17</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="navbar flex items-center justify-between px-6 py-4 relative">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <img src="photos/weather_icon.png" alt="Weather Icon" class="w-10 h-10"/>
+            <h1 class="text-2xl font-bold logo-text">Weather17</h1>
+        </div>
+
+        <!-- Desktop Links -->
+        <div class="nav-links hidden md:flex gap-8 text-lg font-semibold">
+            <a href="#" class="nav-item">Today</a>
+            <a href="#" class="nav-item">Tomorrow</a>
+        </div>
+
+        <!-- Checkbox Toggle -->
+        <input type="checkbox" id="menu-toggle" class="hidden">
+
+        <!-- Hamburger -->
+        <label for="menu-toggle" class="menu-icon md:hidden text-3xl cursor-pointer">☰</label>
+
+        <!-- Mobile Dropdown -->
+        <div class="mobile-menu flex-col items-center gap-6 py-6 text-lg font-semibold">
+            <a href="#" class="nav-item">Today</a>
+            <a href="#" class="nav-item">Tomorrow</a>
+        </div>
+
+    </nav>
+    <!-- CELCIUS TO FAHRENHEIT -->
+    <div class="c2f">
+        
+    </div>
+    <!-- SEARCH -->
+    <div class="search flex flex-col items-center mt-10 gap-4">
+        <input type="text" placeholder="Enter city name" class="p-3 rounded text-black w-64"/>
+        <button class="p-3 bg-purple-600 rounded text-white hover:bg-green-400 hover:text-black transition duration-300">
+            Search
+        </button>
+    </div>
+
+</body>
+</html>
