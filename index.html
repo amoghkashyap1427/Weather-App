@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,32 +14,16 @@
 
     <!-- NAVBAR -->
     <nav class="navbar flex items-center justify-between px-6 py-4 relative">
-
-        <!-- Logo -->
         <div class="flex items-center gap-2">
-            <img src="photos/weather_icon.png" alt="Weather Icon" class="w-8 h-8"/>
+            <img src="https://i.ibb.co/G4krDb9W/weather-icon.png" alt="Weather Icon" class="w-8 h-8" />
             <h1 class="text-[15px] font-bold logo-text">Weather17</h1>
         </div>
 
-        <!-- Desktop Links -->
         <div class="nav-links hidden md:flex gap-8 text-lg font-semibold">
             <a href="#" class="nav-item">Today</a>
-            <a href="#" class="nav-item">Tomorrow</a>
         </div>
-
-        <!-- Checkbox Toggle -->
-        <input type="checkbox" id="menu-toggle" class="hidden">
-
-        <!-- Hamburger -->
-        <label for="menu-toggle" class="menu-icon md:hidden text-[15px] cursor-pointer">☰</label>
-
-        <!-- Mobile Dropdown -->
-        <div class="mobile-menu flex-col items-center gap-6 py-6 text-lg font-semibold">
-            <a href="#" class="nav-item">Today</a>
-            <a href="#" class="nav-item">Tomorrow</a>
-        </div>
-
     </nav>
+
     <!-- CELCIUS TO FAHRENHEIT -->
     <div class="c2f flex mt-4 pl-3">
         <div class="toggle-wrap">
@@ -48,44 +33,55 @@
             <span>°F</span>
         </div>
     </div>
+
     <!-- SEARCH -->
     <div class="searchInput flex flex-col items-center mt-2 mb-5">
         <div class="search flex items-center justify-center mt-1 gap-3">
-            <div class="bg-[white] rounded-[100px] flex flex-row justify-space wmin-w-[200px]">
-                <input type="text" placeholder="Search Location..." class="p-3 rounded-[100px] text-black w-64 h-8 m-2"/>
-                <button class="btn text-black px-4 py-2 rounded-[100px] hover:bg-blue-700 transition duration-300"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+            <div class="bg-white rounded-full flex">
+                <input id="inputLocation" type="text" placeholder="Search Location..."
+                    class="p-3 rounded-full text-black w-64 h-8 m-2" />
+                <button id="searchLocation"
+                    class="btn bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
         </div>
     </div>
+
+    <!-- MAIN CONTENT (HIDDEN INITIALLY) -->
     <div class="mainContentContainer flex justify-center">
         <div class="mainContent">
             <div class="liveLocation mr-6 flex justify-end pt-4">
-                <p class="location">Burdwan<i class="fa-solid fa-location-pin" style="color: #ffffff;"></i></p>
+                <p id="placeLocation" class="location"></p>
+                <span><i class="fa-solid fa-location-pin"></i></span>
             </div>
+
             <div class="temperature">
-                <h1 class="tempValue flex justify-center text-[50px]"></i>32°C</h1>
-                <p class="date ml-[10px] text-[10px]">Aug 23, Tue</p>
+                <h1 id="degree" class="tempValue flex justify-center text-[50px]"></h1>
+                <p id="date" class="date ml-[10px] text-[10px]"></p>
             </div>
+
             <div class="otherParameters flex justify-around mt-6 px-6 text-[12px]">
-                <div class="humidity flex flex-col text-center">
+                <div class="humidity text-center">
                     <p class="font-bold">HUMIDITY</p>
-                    <p class="text-[10px]">99%</p>
+                    <p id="humidity"></p>
                 </div>
-                <div class="visiblity flex flex-col text-center">
-                    <p class="font-bold">VISIBLITY</p>
-                    <p class="text-[10px]">8km</p>
+                <div class="visiblity text-center">
+                    <p class="font-bold">VISIBILITY</p>
+                    <p id="visiblity"></p>
                 </div>
-                <div class="airPressure flex flex-col text-center">
+                <div class="airPressure text-center">
                     <p class="font-bold">AIR PRESSURE</p>
-                    <p class="text-[10px]">1013hPa</p>
+                    <p id="airPressure"></p>
                 </div>
-                <div class="wind flex flex-col text-center">
+                <div class="wind text-center">
                     <p class="font-bold">WIND</p>
-                    <p class="text-[10px]">5kmPh</p>
+                    <p id="wind"></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>
