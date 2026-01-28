@@ -1,8 +1,16 @@
-/* 🌌 Navbar */
+body {
+    transform: scale(1.1);
+    transform-origin: top left;
+    width: 90.91%;
+    /* 100 / 1.1 */
+}
+
+
+/* Navbar */
 .navbar {
     background: linear-gradient(90deg, #0f0f0f, #14001f, #001a0f);
     box-shadow: 0 0 15px #8a2be2, 0 0 30px #39ff14;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Logo */
@@ -16,7 +24,7 @@
     padding: 6px 12px;
     color: white;
     transition: all 0.4s ease;
-    
+
 }
 
 /* Underline glow */
@@ -43,7 +51,7 @@
     width: 100%;
 }
 
-/* 📱 Mobile menu */
+/* Mobile menu */
 .mobile-menu {
     display: none;
     background: #0a0a0a;
@@ -56,7 +64,7 @@
 }
 
 /* Toggle open */
-#menu-toggle:checked ~ .mobile-menu {
+#menu-toggle:checked~.mobile-menu {
     display: flex;
 }
 
@@ -112,6 +120,7 @@
 #miniToggle:checked+.mini-switch::before {
     left: 29px;
 }
+
 /* search button */
 .btn {
     background-image: linear-gradient(135deg, #d01fef -30%, #111111 50%, #0ff166 150%);
@@ -122,10 +131,12 @@
     border-radius: 100px;
     transition: background-color 0.3s ease;
 }
+
 /* Main Content */
-.mainContent{
+.mainContent {
     background-image: linear-gradient(135deg, #d01fef -20%, #000000 80%, #0ff166 150%);
     height: 200px;
     width: 450px;
     border-radius: 20px;
+    display: none;
 }
